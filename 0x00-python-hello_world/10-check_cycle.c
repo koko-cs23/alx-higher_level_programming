@@ -1,28 +1,26 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
-int find(listint_t *head, int node_ptr)
-{
-	listint_t *temp = head;
-	li
-
-	while(temp)
-	{
-		temp = tmp
 /**
- * check_cycle - check if a lincked list contains a cycle.
- * @list: The linked list to check.
- * Return: 1 if the list contains a cycle. 0 otherwise.
+ * check_cycle - checks to see if a list is in an endless loop or cycle
+ * @list: the list to check
+ * Return: 0 if no cycle is detected, 1 if there is a cycle
  */
+
 int check_cycle(listint_t *list)
 {
-	int cycle_found = 0;
-	listint_t *previous_nodes, *temp;
-	temp = list->head;
-	while(temp && !cycle_found)
+	listint_t *doub = list;
+	listint_t *reg = list;
+
+	if (list == NULL)
+		return (0);
+
+	while (doub && doub->next)
 	{
-		temp = temp->next;
-		cycle_found = node_in_array(temp, previous_node);
+		reg = reg->next;
+		doub = doub->next->next;
+
+		if (reg == doub)
+			return (1);
 	}
+	return (0);
 }
