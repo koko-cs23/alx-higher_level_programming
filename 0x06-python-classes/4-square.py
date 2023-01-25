@@ -1,21 +1,3 @@
-Skip to content
-Lordwill1
-/
-alx-higher_level_programming
-Public
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Security
-Insights
-alx-higher_level_programming/0x06-python-classes/4-square.py
-@Lordwill1
-Lordwill1 Added task
- 1 contributor
-32 lines (24 sloc)  744 Bytes
 #!/usr/bin/python3
 
 """Define a class Square."""
