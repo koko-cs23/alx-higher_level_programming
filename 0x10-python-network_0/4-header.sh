@@ -1,10 +1,3 @@
 #!/bin/bash
-# Check if the user has provided a URL
-if [ -z "$1" ]
-then
-    echo "Please provide a URL as an argument"
-    exit 1
-fi
-
-# Send a GET request to the URL with the header X-School-User-Id: 98
+# Sends a GET request to a URL with X-School-User-Id header set to 98 and displays the response body
 curl -H "X-School-User-Id: 98" "$1"
